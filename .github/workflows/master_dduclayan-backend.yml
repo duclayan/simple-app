@@ -13,7 +13,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      SECRET: ${{ secrets.SECRET }}
+      WEBSITE_HOSTNAME: ${{ secrets.WEBSITE_HOSTNAME }}
+      AZURE_POSTGRESQL_CONNECTIONSTRING: ${{ secrets.AZURE_POSTGRESQL_CONNECTIONSTRING }}
     steps:
       - uses: actions/checkout@v4
 
