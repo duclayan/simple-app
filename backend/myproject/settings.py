@@ -15,14 +15,14 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ['SECRET']
+SECRET_KEY = "5HihHVOFCc"
 ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]
 CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME']]
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-f4dkxobmf@f=stzeuy5vk2g-wfp%t!@07b-d%6yui$no53el+1'
+# SECRET_KEY = 'django-insecure-f4dkxobmf@f=stzeuy5vk2g-wfp%t!@07b-d%6yui$no53el+1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
