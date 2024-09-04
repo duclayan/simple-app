@@ -15,9 +15,10 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+WEBSITE_HOSTNAME = "https://dduclayan-backend-dme4fxabfcfkg6a9.eastus-01.azurewebsites.net/"
 SECRET_KEY = "5HihHVOFCc"
-ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]
-CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME']]
+ALLOWED_HOSTS = [WEBSITE_HOSTNAME]
+CSRF_TRUSTED_ORIGINS = ['https://' + WEBSITE_HOSTNAME]
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -134,7 +135,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-conn_str = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
+conn_str ="dbname=dduclayan-backend-database host=dduclayan-backend-server.postgres.database.azure.com port=5432 sslmode=require user=sbwlbigwhi password=jWyMjckDARtn$j3R"
 conn_str_params = {pair.split('=')[0]: pair.split('=')[1] for pair in conn_str.split(' ')}
 DATABASES = {
     'default': {
