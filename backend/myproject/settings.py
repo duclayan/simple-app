@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'projects',  # Add your projects app here
+    'whitenoise',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
