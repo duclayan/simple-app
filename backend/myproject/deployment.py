@@ -1,6 +1,6 @@
 import os 
-from myproject.settings import *  # Change this line
-from myproject.settings import BASE_DIR  # Change this line
+from .settings import *  # Change this line
+from .settings import BASE_DIR  # Change this line
 
 
 SECRET_KEY = os.environ['SECRET']
