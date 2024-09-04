@@ -44,13 +44,14 @@ jobs:
           cd backend
           pip install -r requirements.txt
           python -m myproject.deployment
+          python manage.py collectstatic --noinput 
         shell: bash
 
-      - name: Run collectstatic
-        run: |
-          cd backend
-          python manage.py collectstatic --noinput 
-      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
+      # - name: Run collectstatic
+      #   run: |
+      #     cd backend
+      #     python manage.py collectstatic --noinput 
+      # # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Zip artifact for deployment
         run: |
