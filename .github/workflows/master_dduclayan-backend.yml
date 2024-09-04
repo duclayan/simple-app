@@ -38,7 +38,9 @@ jobs:
         env:
           AZURE_WEBAPP_NAME: ${{ secrets.AZURE_WEBAPP_NAME }}
         run: |
+          cd backend
           pip install -r requirements.txt
+          cd myproject
           python deployment.py
         shell: bash
 
