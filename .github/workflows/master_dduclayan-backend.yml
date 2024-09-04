@@ -43,8 +43,7 @@ jobs:
         run: |
           cd backend
           pip install -r requirements.txt
-          cd myproject
-          python deployment.py
+          python -m myproject.deployment
         shell: bash
 
       - name: Run collectstatic
